@@ -48,16 +48,67 @@ a {
 }
 
 .hero,
-.status-panel {
+.status-panel,
+.game-panel {
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
 }
 
-.hero {
+.hero,
+.game-panel {
   padding: clamp(32px, 8vw, 84px);
   border-radius: 8px;
+}
+
+.game-panel {
+  display: grid;
+  gap: 24px;
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.game-controls {
+  display: grid;
+  gap: 16px;
+  justify-items: end;
+}
+
+.game-stats {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 16px;
+  align-items: center;
+}
+
+.game-board {
+  position: relative;
+  min-height: 320px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(15, 118, 110, 0.06), rgba(180, 83, 9, 0.06));
+  border: 1px dashed rgba(15, 118, 110, 0.24);
+  overflow: hidden;
+}
+
+.target {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f59e0b, #dc2626);
+  box-shadow: 0 10px 22px rgba(220, 38, 38, 0.32);
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.target.pop {
+  transform: scale(1.15);
 }
 
 .eyebrow {

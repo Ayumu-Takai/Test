@@ -28,6 +28,26 @@
         </div>
       </section>
 
+      <section class="game-panel" aria-labelledby="game-title">
+        <div class="game-header">
+          <div>
+            <p class="eyebrow">簡単なゲーム</p>
+            <h2 id="game-title">ターゲットキャッチゲーム</h2>
+            <p class="lead">スタートを押して、動くターゲットをクリックしてスコアを競おう。</p>
+          </div>
+          <div class="game-controls">
+            <div class="game-stats">
+              <div><span class="label">Score</span><strong id="score">0</strong></div>
+              <div><span class="label">Time</span><strong id="timer">30</strong>s</div>
+            </div>
+            <button id="start-game" class="button primary">スタート</button>
+          </div>
+        </div>
+        <div class="game-board" id="game-board" aria-label="ゲームエリア">
+          <div class="target" id="target" hidden></div>
+        </div>
+      </section>
+
       <section class="status-panel" aria-label="サイト状態">
         <div>
           <span class="label">Mode</span>
